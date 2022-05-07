@@ -1,0 +1,26 @@
+[
+  {
+    "nazwa" : "Apteka 4",
+    "kod_pocztowy" : "95060",
+    "ulica" : "PLAC JANA PAWŁA II NR 2",
+    "miejscowosc" : "Brzeziny k Łodzi",
+    "gps_dlugosc" : 19.7514990000,
+    "gps_szerokosc" : 51.8004010000
+  },
+  {
+    "nazwa" : "Apteka 5",
+    "kod_pocztowy" : "95040",
+    "ulica" : "GŁOWACKIEGO 20",
+    "miejscowosc" : "Koluszki",
+    "gps_dlugosc" : 19.8200982000,
+    "gps_szerokosc" : 51.7411165000
+  },
+  {
+    "nazwa" : "Apteka 6",
+    "kod_pocztowy" : "90451",
+    "ulica" : "PIOTRKOWSKA 225",
+    "miejscowosc" : "Łódź",
+    "gps_dlugosc" : 19.4597440000,
+    "gps_szerokosc" : 51.7529710000
+  }
+]

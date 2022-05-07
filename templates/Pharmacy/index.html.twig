@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Pharmacies system</h1>
+                <p class="lead text-muted">Used to store informations about pharmacies in Poland</p>
+                <p>
+                    <a href="{{ url('show_all') }}" class="btn btn-primary my-2">List all pharmacies</a>
+                    <a href="{{ url('import') }}" class="btn btn-secondary my-2">Upload new pharmacies</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <div id="mainCards">
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.czechuniversities.com/uploads/2020/04/24.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Lorem ipsum</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque convallis a cras semper auctor neque vitae tempus quam. </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.collinsdictionary.com/images/full/pharmacy_390599908_1000.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Lorem ipsum</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque convallis a cras semper auctor neque vitae tempus quam. </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.usnews.com/object/image/00000167-0dd1-d73e-a167-fff3a37d0000/181113_pharmacist?size=responsive640&update-time=1542125284581" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Lorem ipsum</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque convallis a cras semper auctor neque vitae tempus quam.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

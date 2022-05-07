@@ -1,0 +1,14 @@
+<div id="exportWidget" style="display: none;">
+    Export
+    <select name="whatExport" class="form-control one-row">
+        <option value="filtered" selected>Filtered data</option>
+        <option value="all">All data</option>
+    </select>
+    To
+    <select name="exportTo" class="form-control one-row">
+        <option value="json" selected>JSON</option>
+        <option value="csv" selected>CSV</option>
+        <option value="xml" selected>XML</option>
+    </select>
+    <button type="submit" class="btn btn-primary my-btn" onclick="APP.downloadFile();">Download!</button>
+</div>

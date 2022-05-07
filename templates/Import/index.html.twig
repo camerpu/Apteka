@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div style="padding: 50px;">
+        {{ form_start(upload_form) }}
+        {% for message in app.flashes("success") %}
+            <div class="alert alert-success" role="alert">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in app.flashes("error") %}
+            <div class="alert alert-danger" role="alert">{{ message }}</div>
+        {% endfor %}
+        <div class="alert alert-dark" role="alert">
+            Użyj pliku JSON aby wgrać do bazy danych kolejne apteki.<br />
+            Wymagane dane: <i>nazwa, kod pocztowy, ulica, miejscowosc, gps_dlugosc, gps_szerokosc</i>
+        </div>
+        <div class="form-control">
+            <div class="mb-3">
+                {{ form_label(upload_form.import_file) }}
+                <div style="color: red">
+                    {{ form_errors(upload_form.import_file) }}
+                </div>
+                {{ form_widget(upload_form.import_file,{'attr':{'class':'form-control', 'accept':'.json,application/JSON'}}) }}
+            </div>
+
+            {{ form_widget(upload_form.save,{'attr':{'class':'btn btn-primary mb-3'}}) }}
+
+        </div>
+        {{ form_end(upload_form) }}
+    </div>
+{% endblock %}
