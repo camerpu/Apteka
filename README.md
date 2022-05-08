@@ -4,11 +4,20 @@ Live version: https://system.max-play.pl/<br>
 Used technologies: PHP(Symfony), JS(jQuery), TWIG for views.<br>
 The table with pagination, filtering/ordering is build with jQuery Datatables.
 App has also REST API created automatically with symfony api platform component, you can check the documentation here: https://system.max-play.pl/api
-# To install:
+# To install manually:
 git clone https://github.com/camerpu/Apteka/<br>
-composer update<br>
+cd Apteka<br>
+cd src && composer update<br>
 [put correct db credentials in .env file]<br>
-php bin/console doctrine:schema:create
+cd src && php bin/console doctrine:schema:create
+# To install with docker:
+git clone https://github.com/camerpu/Apteka/<br>
+cd Apteka/docker<br>
+docker-compose up -d<br>
+docker-compose run php-fpm php bin/console doctrine:schema:create<br>
+docker-compose run php-fpm mkdir /var/www/assets/uploads<br>
+docker-compose run php-fpm chmod 777 /var/www/assets/uploads/<br>
+
 # Tests
 Before tests, run:<br>
 <b>php bin/console --env=test doctrine:database:create</b><br>
