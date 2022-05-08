@@ -6,6 +6,7 @@ namespace App\Controller;
 use App\Entity\Pharmacy;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormError;
@@ -21,6 +22,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class ImportController extends AbstractController
 {
     private string $directoryForFiles = '../assets/uploads/';
+
+    public function __construct(){
+        $filesystem = new Filesystem();
+        if(!$filesystem->exists($this->directoryForFiles))
+        {
+            $filesystem->mkdir($this->directoryForFiles);
+        }
+    }
 
     /**
      * @Route("/import", name="import")
