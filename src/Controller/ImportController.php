@@ -78,7 +78,7 @@ class ImportController extends AbstractController
                     $newFilename
                 );
             } catch (FileException $e) {
-                $form->get('import_file')->addError(new FormError('Bad JSON file uploaded'));
+                $form->get('import_file')->addError(new FormError('Internal server error while handling the file'));
                 return ['status' => false, 'message' => 'Invalid file'];
             }
 

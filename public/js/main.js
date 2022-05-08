@@ -51,7 +51,7 @@ const APP = {
       let whatToExport = $('select[name=whatExport]').val();
       let exportToFormat = $('select[name=exportTo]').val();
       let url = '';
-      let base = 'http://127.0.0.1:8000';
+      let base = location.origin;
       if(whatToExport === 'all') {
          url = new URL('export/all/' + exportToFormat, base);
       }
