@@ -1,6 +1,6 @@
 $(document).ready(() =>{
    $.ajax({
-      url: "/api/pharmacies",
+      url: "/pharmacies/getAll",
    }).done((data) => {
       $('#pharmacyTable th').each( function () {
          var title = $(this).text();
@@ -9,7 +9,7 @@ $(document).ready(() =>{
 
       const createdDataTable = $("#pharmacyTable").DataTable({
          searching: true,
-         data: data['hydra:member'],
+         data: data['data'],
          columns: [
             { "data": "id" },
             { "data": "name" },

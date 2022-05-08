@@ -5,12 +5,10 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\PharmacyRepository;
 use Doctrine\ORM\Mapping as ORM;
-use App\Controller\PharmaciesGetAll;
 
 /**
  * @ORM\Entity(repositoryClass=PharmacyRepository::class)
  * @ApiResource(
- *   attributes={"pagination_enabled"=false},
  * )
  */
 class Pharmacy
